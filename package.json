@@ -11,7 +11,6 @@
     "test": "test"
   },
   "dependencies": {
-    "should": "^4.6.3"
   },
   "scripts": {
     "test": "mocha"

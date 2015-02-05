@@ -1,0 +1,34 @@
+{
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "should": "^4.6.3"
+  },
+  "name": "error-builder",
+  "version": "1.0.0",
+  "description": "Easily build custom error types",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "should": "^4.6.3"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://denwilliams@github.com/denwilliams/node-error-builder.git"
+  },
+  "keywords": [
+    "error",
+    "errors",
+    "custom"
+  ],
+  "author": "Den Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/denwilliams/node-error-builder/issues"
+  },
+  "homepage": "https://github.com/denwilliams/node-error-builder"
+}

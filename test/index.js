@@ -52,7 +52,24 @@ it('should identify as an Error instance', function(done) {
 		throw new AppError();
 	} catch(err) {
 		(err instanceof Error).should.be.true;
+		(err instanceof AppError).should.be.true;
 		err.message.should.equal('Application error');
+		done();
+	}
+});
+
+it('should identify extended errors as a BaseError instance', function(done) {
+	var ExtendedError = errorBuilder.create('ExtendedError', -2, 'Extended error', AppError);
+	var AnotherError = errorBuilder.create('AnotherError', -3, 'Another error', AppError);
+
+	try {
+		throw new ExtendedError();
+	} catch(err) {
+		(err instanceof Error).should.be.true;
+		(err instanceof AppError).should.be.true;
+		(err instanceof ExtendedError).should.be.true;
+		(err instanceof AnotherError).should.be.false;
+		err.message.should.equal('Extended error');
 		done();
 	}
 });
